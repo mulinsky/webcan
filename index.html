@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>树形结构</title>
+<style type="text/css">
+*{padding:0;margin:0; font-size:12px;font-family:"微软雅黑";}
+.classify{width:120px;height:auto!important;min-height:200px; max-height:600px; float:left; position:fixed; -position:absolute; top:135px; left:10px; background:#fff; z-index:9999; overflow:hidden;}
+.classify_t{ width:120px; height:40px; margin:0 auto; background:#f60;}
+.classify_t p{ text-align:center; line-height:40px; font-size:16px; color:#fff;}
+.classify_m{ width:120px; height:auto; float:left; background:#f5f5f5; padding:5px 0 10px;}
+.classify_m dl{ width:118px; height:auto; cursor:pointer;}
+.classify_m dt{height:30px; background:url(arrow_small.gif) 5px center no-repeat; line-height:30px; padding-left:18px;font-family:"微软雅黑";font-size:14px;}
+.classify_m dd{height:28px; padding-left:30px; line-height:28px; color:#333; display:none;}
+.act_dl dt{ background:url(arrow_small_d.gif) 5px center no-repeat; color:#f60;}
+.act_dl dd{ display:block;}
+.hov_dd{ background:#fff; border-left:5px solid #f60;}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.classify_m dl').click(function(){
+		$(this).addClass('act_dl').siblings().removeClass('act_dl');
+		})
+		$('.classify_m dd').hover(function(){
+		$(this).addClass('hov_dd').stop().animate({paddingLeft:'40px'},200);
+		},function(){
+		$(this).removeClass('hov_dd').stop().animate({paddingLeft:'27px'},200);
+			})
+	})
+</script>
+</head>
+<body>
+<div style="height:2000px;">
+</div>
+<div class="classify">
+	<div class="classify_t"><p>全部行业分类</p></div>
+	<div class="classify_m">
+    	<dl class="act_dl">
+        	<dt>测试数据</dt>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+        </dl>
+    	<dl>
+        	<dt>装备产业</dt>
+            <dd>机械电子</dd>
+            <dd>机械电子</dd>
+        </dl>
+    	<dl>
+        	<dt>测试数据</dt>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+            <dd>家具家居</dd>
+        </dl>
+    	<dl>
+        	<dt>装备产业</dt>
+            <dd>机械电子</dd>
+            <dd>机械电子</dd>
+        </dl>
+	</div>
+</div>
+
+</body>
+
+</html>
+
